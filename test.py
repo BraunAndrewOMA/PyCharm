@@ -1,13 +1,11 @@
-#
+# Instance Attributes
 
-class Joe(object):
-    def callme(self):
-        print('calling "callme" method with instance: ')
-        print(self)
+import random
 
-thisjoe = Joe()
+class MyClass(object):
+    def dothis(self):
+        self.rand_val = random.randint(1,10)
 
-thisjoe.callme()
-
-print(thisjoe)
-
+myinst = MyClass()
+myinst.dothis()
+print(myinst.rand_val)
