@@ -1,10 +1,13 @@
 #
 
-class MyClass(object):
-    var = 10
+class Joe(object):
+    def callme(self):
+        print('calling "callme" method with instance: ')
+        print(self)
 
-this_obj = MyClass()
-that_obj = MyClass()
+thisjoe = Joe()
 
-print(this_obj.var)
-print(that_obj.var)
+thisjoe.callme()
+
+print(thisjoe)
+
