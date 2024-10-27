@@ -1,19 +1,23 @@
-#Encapsulation
+#Encapsulation 2
 
-class MyClass(object):
-    def set_val(self, val): # Setter method
-        self.value = val
+class MyInteger(object):
+    def set_val(self, val):
+        try:
+            val = int(val)
+        except ValueError:
+            return
+        self.val = val
 
-    def get_val(self): # Getter method
-        return self.value
+    def get_val(self):
+        return self.val
 
-a = MyClass()
-b = MyClass()
+    def increment_val(self):
+        self.val = self.val + 1
 
-a.set_val(10)
-b.set_val(100)
+i = MyInteger()
+i.set_val(9)
+print(i.get_val())
 
-a.value = 'hello'
-
-print(a.get_val())
-print(b.get_val())
+i.val = 'hi'
+print(i.get_val())
+print(i.increment_val())
